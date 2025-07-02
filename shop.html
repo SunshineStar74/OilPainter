@@ -8,6 +8,11 @@
 </head>
 	
 <body>
+  
+  <header>
+    <h1>Shop</h1>
+    <p>Purchase Original Paintings</p>
+  </header>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -18,60 +23,53 @@
     </ul>
   </nav>
   
-  <div id="pageContent">
-    <header>
-      <h1>Shop</h1>
-      <p>Purchase Original Paintings</p>
-    </header>
-    
-    <div class="shop-container">
-      <div class="filters">
-        <label for="priceFilter">Max Price:</label>
-        <input type="number" id="priceFilter" placeholder="$500" />
-        
-        <label for="sort">Sort by:</label>
-        <select id="sort">
-          <option value="default">Default</option>
-          <option value="priceLow">Price: Low to High</option>
-          <option value="priceHigh">Price: High to Low</option>
-        </select>
-      </div>
+  <div class="shop-container">
+    <div class="filters">
+      <label for="priceFilter">Max Price:</label>
+      <input type="number" id="priceFilter" placeholder="$500" />
       
-      <div class="product-grid" id="productGrid">
-        <div class="product" data-price="400">
-          <img src="Jorge Squier Sunset Valley.png" alt="Sunset Valley">
-          <h3>Sunset Valley</h3>
-          <p>$400</p>
-          <button>Buy Now</button>
-        </div>
-        
-        <div class="product" data-price="650">
-          <img src="Jorge Squier Pacific Sunset.png" alt="Pacific Sunset">
-          <h3>Pacific Sunset</h3>
-          <p>$650</p>
-          <button>Buy Now</button>
-        </div>
-        
-        <div class="product" data-price="300">
-          <img src="Jorge Squier Forrest at Twilight.png" alt="Forest at Twilight">
-          <h3>Forest at Twilight</h3>
-          <p>$300</p>
-          <button>Buy Now</button>
-        </div>
-        
-        <div class="product" data-price="500">
-          <img src="Jorge Squier MiddleEarth.png" alt="MiddleEarth">
-          <h3>MiddleEarth</h3>
-          <p>$500</p>
-          <button>Buy Now</button>
-        </div>
-      </div>
+      <label for="sort">Sort by:</label>
+      <select id="sort">
+        <option value="default">Default</option>
+        <option value="priceLow">Price: Low to High</option>
+        <option value="priceHigh">Price: High to Low</option>
+      </select>
     </div>
     
-    <footer>
-      &copy; 2025 Jorge Squire. All rights reserved.
-    </footer>
+    <div class="product-grid" id="productGrid">
+      <div class="product" data-price="400">
+        <img src="Jorge Squier Sunset Valley.png" alt="Sunset Valley">
+        <h3>Sunset Valley</h3>
+        <p>$400</p>
+        <button>Buy Now</button>
+      </div>
+      
+      <div class="product" data-price="650">
+        <img src="Jorge Squier Pacific Sunset.png" alt="Pacific Sunset">
+        <h3>Pacific Sunset</h3>
+        <p>$650</p>
+        <button>Buy Now</button>
+      </div>
+      
+      <div class="product" data-price="300">
+        <img src="Jorge Squier Forrest at Twilight.png" alt="Forest at Twilight">
+        <h3>Forest at Twilight</h3>
+        <p>$300</p>
+        <button>Buy Now</button>
+      </div>
+      
+      <div class="product" data-price="500">
+        <img src="Jorge Squier MiddleEarth.png" alt="MiddleEarth">
+        <h3>MiddleEarth</h3>
+        <p>$500</p>
+        <button>Buy Now</button>
+      </div>
+    </div>
   </div>
+  
+  <footer>
+    &copy; 2025 Jorge Squire. All rights reserved.
+  </footer>
   
   <script>
     const priceFilter = document.getElementById('priceFilter');
