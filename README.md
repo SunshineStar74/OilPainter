@@ -1,1 +1,2 @@
-# OilPainter
+# JSquierArt
+## Art by Jorge Squier
