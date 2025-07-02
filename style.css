@@ -27,6 +27,7 @@ header {
 }
 
 header h1 {
+  font-family: 
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
@@ -167,72 +168,6 @@ a:hover {
 .product p {
   margin-bottom: 1rem;
   font-weight: bold;
-}
-
-body.menu-open #pageContent {
-  filter: blur(6px);
-  pointer-events: none;
-  user-select: none;
-  opacity: 0.4;
-  transition: all 0.3s ease;
-}
-
-.menu-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  z-index: 999;
-  color: #333;
-  cursor: pointer;
-}
-
-.close-menu {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #333;
-  cursor: pointer;
-}
-
-.mobile-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 250px;
-  background: #eee;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-  z-index: 1000;
-  padding-top: 4rem;
-}
-
-.mobile-nav.open {
-  transform: translateX(0);
-}
-
-.mobile-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
-.mobile-nav ul li a {
-  text-decoration: none;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #333;
 }
 
 .quote {
