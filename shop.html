@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop – Jorge Squire</title>
+  <title>JSquireArt - Shop</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+	
 <body>
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   <nav class="mobile-nav" id="mobileNav">
@@ -22,7 +23,7 @@
   <div id="pageContent">
     <header>
       <h1>Shop</h1>
-      <p>Purchase Original Paintings and Prints</p>
+      <p>Purchase Original Paintings</p>
     </header>
     
     <div class="shop-container">
@@ -108,8 +109,8 @@
       const isOpen = nav.classList.toggle('open');
       document.body.classList.toggle('menu-open', isOpen);
     }
-
-		function closeMenu() {
+    
+    function closeMenu() {
       document.getElementById('mobileNav').classList.remove('open');
       document.body.classList.remove('menu-open');
     }
