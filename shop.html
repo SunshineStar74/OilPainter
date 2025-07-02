@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop – Jorge Squire</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Shop</h1>
+    <p>Purchase Original Paintings and Prints</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+    </ul>
+  </nav>
+
+  <div class="shop-container">
+    <div class="filters">
+      <label for="priceFilter">Max Price:</label>
+      <input type="number" id="priceFilter" placeholder="$500" />
+
+      <label for="sort">Sort by:</label>
+      <select id="sort">
+        <option value="default">Default</option>
+        <option value="priceLow">Price: Low to High</option>
+        <option value="priceHigh">Price: High to Low</option>
+      </select>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+      <div class="product" data-price="400">
+        <img src="Jorge Squier Sunset Valley.png" alt="Sunset Valley">
+        <h3>Sunset Valley</h3>
+        <p>$400</p>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="product" data-price="650">
+        <img src="Jorge Squier Pacific Sunset.png" alt="Pacific Sunset">
+        <h3>Pacific Sunset</h3>
+        <p>$650</p>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="product" data-price="300">
+        <img src="Jorge Squier Forrest at Twilight.png" alt="Forest at Twilight">
+        <h3>Forest at Twilight</h3>
+        <p>$300</p>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="product" data-price="500">
+        <img src="Jorge Squier MiddleEarth.png" alt="MiddleEarth">
+        <h3>MiddleEarth</h3>
+        <p>$500</p>
+        <button>Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Jorge Squire. All rights reserved.
+  </footer>
+
+  <script>
+    const priceFilter = document.getElementById('priceFilter');
+    const sortSelect = document.getElementById('sort');
+    const productGrid = document.getElementById('productGrid');
+
+    function filterAndSortProducts() {
+      const maxPrice = parseFloat(priceFilter.value) || Infinity;
+      const sortValue = sortSelect.value;
+
+      const products = Array.from(productGrid.children);
+
+      let filtered = products.filter(product => {
+        const price = parseFloat(product.getAttribute('data-price'));
+        return price <= maxPrice;
+      });
+
+      if (sortValue === 'priceLow') {
+        filtered.sort((a, b) => a.dataset.price - b.dataset.price);
+      } else if (sortValue === 'priceHigh') {
+        filtered.sort((a, b) => b.dataset.price - a.dataset.price);
+      }
+
+      productGrid.innerHTML = '';
+      filtered.forEach(product => productGrid.appendChild(product));
+    }
+
+    priceFilter.addEventListener('input', filterAndSortProducts);
+    sortSelect.addEventListener('change', filterAndSortProducts);
+  </script>
+</body>
+</html>
