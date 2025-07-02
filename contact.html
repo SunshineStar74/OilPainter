@@ -16,12 +16,13 @@
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
   <nav class="mobile-nav" id="mobileNav">
+    <button class="close-menu" onclick="toggleMenu()">×</button>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+      <li><a href="gallery.html" onclick="closeMenu()">Gallery</a></li>
+      <li><a href="about.html" onclick="closeMenu()">About</a></li>
+      <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+      <li><a href="shop.html" class="active" onclick="closeMenu()">Shop</a></li>
     </ul>
   </nav>
 
@@ -43,7 +44,11 @@
       const isOpen = nav.classList.toggle('open');
       document.body.classList.toggle('menu-open', isOpen);
     }
+		
+		function closeMenu() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.body.classList.remove('menu-open');
+    }
   </script>
-  
 </body>
 </html>
