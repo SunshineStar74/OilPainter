@@ -42,5 +42,13 @@
     &copy; 2025 Jorge Squire. All rights reserved.
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      const isOpen = nav.classList.toggle('open');
+      document.body.classList.toggle('menu-open', isOpen);
+    }
+  </script>
+  
 </body>
 </html>
