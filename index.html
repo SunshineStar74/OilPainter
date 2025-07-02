@@ -7,12 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header>
-    <h1>Welcome to the Art of Jorge Squire</h1>
-    <p>Oil Painter | Exploring Nature, Light, and Emotion</p>
-  </header>
-
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
   <nav class="mobile-nav" id="mobileNav">
@@ -26,6 +20,12 @@
     </ul>
   </nav>
 	
+  <div id="pageContent">
+  <header>
+    <h1>Welcome to the Art of Jorge Squire</h1>
+    <p>Oil Painter | Exploring Nature, Light, and Emotion</p>
+  </header>
+	  
   <main>
     <p style="max-width: 700px; margin: 2rem auto; font-size: 1.2rem; text-align: center;">
       Welcome to my official website. I'm Jorge Squire, a contemporary oil painter capturing the depth of light, landscape, and soul. Please explore my <a href="gallery.html">gallery</a> to view my latest works.
@@ -35,7 +35,7 @@
   <footer>
     &copy; 2025 Jorge Squire. All rights reserved. &nbsp;|&nbsp; <a href="mailto:name@example.com">Contact</a>
   </footer>
-  
+  </div>
   <script>
     function toggleMenu() {
       const nav = document.getElementById('mobileNav');
