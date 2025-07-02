@@ -187,6 +187,17 @@ body.menu-open::before {
   cursor: pointer;
 }
 
+.close-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+
 .mobile-nav {
   position: fixed;
   top: 0;
