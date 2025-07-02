@@ -9,9 +9,6 @@ body {
   background-color: #f9f7f4;
   color: #222;
   line-height: 1.6;
-}
-
-body {
   opacity: 0;
   animation: fadeIn 0.7s ease-in forwards;
 }
