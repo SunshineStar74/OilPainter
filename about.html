@@ -7,12 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header>
-    <h1>About the Author</h1>
-    <p>Oil Painter | Storyteller Through Canvas</p>
-  </header>
-
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
   <nav class="mobile-nav" id="mobileNav">
@@ -25,23 +19,28 @@
       <li><a href="shop.html" class="active" onclick="closeMenu()">Shop</a></li>
     </ul>
   </nav>
+	
+  <div id="pageContent">
+    <header>
+      <h1>About the Author</h1>
+      <p>Oil Painter | Storyteller Through Canvas</p>
+    </header>
 
-  <main style="max-width: 800px; margin: 2rem auto; padding: 1rem;">
-    <img src="Jorge Squier.png" alt="Picture of Jorge Squire">
-    <p>Jorge Squier is a local Houston artist who has taken inspiration from his travels, and embracing his own creativity, he began painting scenes of the peoples and landscapes that he encountered. Squier's art is a reflection of his experiences and a way to share his unique perspective with others. This page is dedicated to showcasing and selling Squier's art. Please take a moment to explore his work and feel free to contact him with any questions or inquiries.</p>
-    <br>
-    <p>Squier created this art page to showcase and sell his art. Partial proceeds from each piece of art sold are donated to charities focused on children, education, and providing food for those in need.</p>
-    <br>
-    <br>
-    <br>
-    <p>“ We make a living by what we get, but we make a life by what we give.”</p>
-    <br>
-    <p>- Winston Churchill</p>
-  </main>
+  	<main style="max-width: 800px; margin: 2rem auto; padding: 1rem;">
+    	<img src="Jorge Squier.png" alt="Picture of Jorge Squire" class="about-img">
+    	<p>Jorge Squier is a local Houston artist who has taken inspiration from his travels, and embracing his own creativity, he began painting scenes of the peoples and landscapes that he encountered. Squier's art is a reflection of his experiences and a way to share his unique perspective with others. This page is dedicated to showcasing and selling Squier's art. Please take a moment to explore his work and feel free to contact him with any questions or inquiries.</p>
+    	<br>
+    	<p>Squier created this art page to showcase and sell his art. Partial proceeds from each piece of art sold are donated to charities focused on children, education, and providing food for those in need.</p>
+    	<br>
+    	<br>
+    	<br>
+    	<p class="quote">“ We make a living by what we get, but we make a life by what we give.”<br><em>– Winston Churchill</em></p>
+  	</main>
 
-  <footer>
-    &copy; 2025 Jorge Squire. All rights reserved.
-  </footer>
+  	<footer>
+    	&copy; 2025 Jorge Squire. All rights reserved.
+  	</footer>
+	</div>
 
   <script>
     function toggleMenu() {
