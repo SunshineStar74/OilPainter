@@ -114,6 +114,21 @@ main {
   flex-wrap: wrap;
 }
 
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-icons a {
+  color: #666;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.footer-icons a:hover {
+  color: #333;
+}
+
 a {
   color: #333;
   text-decoration: none;
