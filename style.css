@@ -112,3 +112,53 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.shop-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.filters label,
+.filters select,
+.filters input {
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.product {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.product h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product p {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
