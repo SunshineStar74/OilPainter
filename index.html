@@ -5,28 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aldo Saenz – Oil Paintings</title>
   <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      background: #fdf6f0;
-      color: #333;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    img {
-      width: 300px;
-      margin: 10px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f9f7f4;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+
+    .gallery {
+      max-width: 1200px;
+      margin: 3rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #fff;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #eaeaea;
+      margin-top: 3rem;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>Aldo Saenz – Oil Painting Portfolio</h1>
-  <p>Welcome to my digital gallery. Here's some of my work:</p>
 
-  <h2>Gallery</h2>
-  <img src="painting1.jpg" alt="Painting 1">
-  <img src="painting2.jpg" alt="Painting 2">
+  <header>
+    <h1>Aldo Saenz</h1>
+    <p>Oil Painter | Contemporary Fine Art</p>
+  </header>
 
-  <p>Contact me: aldo@example.com</p>
+  <section class="gallery">
+    <img src="painting1.jpg" alt="Painting 1">
+    <img src="painting2.jpg" alt="Painting 2">
+    <img src="painting3.jpg" alt="Painting 3">
+    <img src="painting4.jpg" alt="Painting 4">
+    <!-- Add more paintings as needed -->
+  </section>
+
+  <footer>
+    &copy; 2025 Aldo Saenz. All rights reserved. &nbsp;|&nbsp; <a href="mailto:aldo@example.com">Contact</a>
+  </footer>
+
 </body>
 </html>
