@@ -100,6 +100,12 @@
 
     priceFilter.addEventListener('input', filterAndSortProducts);
     sortSelect.addEventListener('change', filterAndSortProducts);
+		
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      const isOpen = nav.classList.toggle('open');
+      document.body.classList.toggle('menu-open', isOpen);
+    }
   </script>
 </body>
 </html>
