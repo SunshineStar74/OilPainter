@@ -224,7 +224,7 @@ a:hover {
   position: relative;
   width: 100%;
   max-width: 800px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .main-image img {
@@ -235,6 +235,13 @@ a:hover {
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   object-fit: contain;
+}
+
+.image-description {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #444;
 }
 
 .arrow {
