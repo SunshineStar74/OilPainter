@@ -11,12 +11,12 @@
   />
 </head>
 <body>
-  
+
   <header>
     <h1>Jorge Squier</h1>
     <p>Oil Painter | Storyteller Through Canvas</p>
   </header>
-  
+
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -26,14 +26,20 @@
     </ul>
   </nav>
 
-  <section class="gallery">
-    <img src="Jorge Squier MiddleEarth.png" alt="MiddleEarth Painting by Jorge Squire">
-    <img src="Jorge Squier Pacific Sunset.png" alt="Pacific Sunset Painting by Jorge Squire">
-    <img src="Jorge Squier Sunset Valley.png" alt="Sunset Valley Painting by Jorge Squire">
-    <img src="Jorge Squier Forrest at Twilight.png" alt="Forrest at Twilight Painting by Jorge Squire">
-    <!-- Add more paintings as needed -->
-  </section>
-  
+  <div class="gallery-container">
+    <div class="main-image">
+      <button class="arrow left" onclick="prevImage()"><i class="fas fa-chevron-left"></i></button>
+      <img id="mainDisplay" src="Jorge Squier MiddleEarth.png" alt="Main Painting">
+      <button class="arrow right" onclick="nextImage()"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="thumbnail-row" id="thumbnails">
+      <img src="Jorge Squier MiddleEarth.png" class="active" alt="MiddleEarth" onclick="setImage(0)">
+      <img src="Jorge Squier Pacific Sunset.png" alt="Pacific Sunset" onclick="setImage(1)">
+      <img src="Jorge Squier Sunset Valley.png" alt="Sunset Valley" onclick="setImage(2)">
+      <img src="Jorge Squier Forrest at Twilight.png" alt="Forrest at Twilight" onclick="setImage(3)">
+    </div>
+  </div>
+
   <footer class="footer-split">
     <span>&copy; 2025 Jorge Squire. All rights reserved.</span>
     <div class="footer-icons">
@@ -42,5 +48,37 @@
       <a href="https://www.facebook.com/jorge.squier" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
     </div>
   </footer>
+
+  <script>
+    const images = [
+      "Jorge Squier MiddleEarth.png",
+      "Jorge Squier Pacific Sunset.png",
+      "Jorge Squier Sunset Valley.png",
+      "Jorge Squier Forrest at Twilight.png"
+    ];
+
+    let current = 0;
+    const mainDisplay = document.getElementById("mainDisplay");
+    const thumbnails = document.getElementById("thumbnails").children;
+
+    function setImage(index) {
+      current = index;
+      mainDisplay.src = images[current];
+      for (let i = 0; i < thumbnails.length; i++) {
+        thumbnails[i].classList.remove("active");
+      }
+      thumbnails[current].classList.add("active");
+    }
+
+    function nextImage() {
+      current = (current + 1) % images.length;
+      setImage(current);
+    }
+
+    function prevImage() {
+      current = (current - 1 + images.length) % images.length;
+      setImage(current);
+    }
+  </script>
 </body>
 </html>
