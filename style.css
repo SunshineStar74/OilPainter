@@ -222,8 +222,8 @@ a:hover {
 
 .main-image {
   position: relative;
-  width: auto;
-  max-width: auto;
+  width: 100%;
+  max-width: 800px;
   margin-bottom: 2rem;
 }
 
