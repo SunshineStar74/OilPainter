@@ -104,6 +104,7 @@
     let current = 0;
     const mainDisplay = document.getElementById("mainDisplay");
     const thumbnails = document.getElementById("thumbnails").children;
+    const thumbnailRow = document.getElementById("thumbnails");
 
     function setImage(index) {
       current = index;
@@ -112,6 +113,7 @@
         thumbnails[i].classList.remove("active");
       }
       thumbnails[current].classList.add("active");
+      thumbnails[current].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
     }
 
     function nextImage() {
