@@ -117,8 +117,10 @@
       }
       thumbnails[current].classList.add("active");
 
-      const offset = Math.max(0, (current - 1) * 111); // 100px + 1rem gap
-      thumbnailRow.style.transform = `translateX(-${offset}px)`;
+      const thumbnailWidth = thumbnails[0].offsetWidth + 16; // width + gap
+      const containerCenter = thumbnailRow.parentElement.offsetWidth / 2;
+      const scrollTo = (thumbnailWidth * current + thumbnailWidth / 2) - containerCenter;
+      thumbnailRow.scrollTo({ left: scrollTo, behavior: 'smooth' });
     }
 
     function setImage(index) {
@@ -136,7 +138,7 @@
       updateGallery();
     }
 
-    updateGallery();
+    window.addEventListener('load', updateGallery);
   </script>
 </body>
 </html>
