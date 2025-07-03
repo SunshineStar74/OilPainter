@@ -32,6 +32,9 @@
       <img id="mainDisplay" src="Jorge Squier MiddleEarth.png" alt="Main Painting">
       <button class="arrow right" onclick="nextImage()"><i class="fas fa-chevron-right"></i></button>
     </div>
+    <div class="image-description" id="imageDescription">
+      <strong>4 Men</strong> , ([year]), 24x36,  Oil on Canvas
+    </div>
     <div class="thumbnail-wrapper">
       <div class="thumbnail-row" id="thumbnails">
         <img src="Jorge Squier 4 Men.jpg" alt="4 Men" onclick="setImage(0)">
@@ -100,11 +103,165 @@
       "Jorge Squier Tin Cup.png", 
       "Jorge Squier White Flowers.png"
     ];
-
+    
+  const descriptions = [
+      {
+        name: "4 Men",
+        year: 2022,
+        size: "24x36",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "African Lowtide",
+        year: 2023,
+        size: "20x30",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Afternoon Glow",
+        year: 2021,
+        size: "18x24",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Beach Grass",
+        year: 2022,
+        size: "30x40",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Blue Bonnet Path",
+        year: 2022,
+        size: "30x40",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Boat in Lowtide",
+        year: 2023,
+        size: "20x30",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Clouds",
+        year: 2021,
+        size: "18x24",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Country House",
+        year: 2022,
+        size: "30x40",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Cranberry Juice",
+        year: 2022,
+        size: "30x40",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Forest at Twilight",
+        year: 2023,
+        size: "20x30",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Forest Path",
+        year: 2021,
+        size: "18x24",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Gourd Carver",
+        year: 2022,
+        size: "30x40",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "House in the Field",
+        year: 2022,
+        size: "30x40",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Little Cabin in the Woods",
+        year: 2023,
+        size: "20x30",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Man 1",
+        year: 2021,
+        size: "18x24",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Middle Earth",
+        year: 2022,
+        size: "30x40",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Mountain",
+        year: 2022,
+        size: "30x40",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Pacific Sunset",
+        year: 2023,
+        size: "20x30",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Pear",
+        year: 2021,
+        size: "18x24",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Pickle Jars",
+        year: 2022,
+        size: "30x40",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Pier",
+        year: 2022,
+        size: "30x40",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Snowy Cabin",
+        year: 2023,
+        size: "20x30",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Sunset Valley",
+        year: 2021,
+        size: "18x24",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "Tin Cup",
+        year: 2022,
+        size: "30x40",
+        medium: "Oil on Canvas"
+      },
+      {
+        name: "White Flowers",
+        year: 2022,
+        size: "30x40",
+        medium: "Oil on Canvas"
+      }
+    ];
+    
     let current = 0;
     const mainDisplay = document.getElementById("mainDisplay");
     const thumbnailRow = document.getElementById("thumbnails");
     const thumbnails = thumbnailRow.getElementsByTagName("img");
+    const descriptionBox = document.getElementById("imageDescription");
 
     function updateGallery() {
       mainDisplay.src = images[current];
@@ -114,10 +271,13 @@
       }
       thumbnails[current].classList.add("active");
 
-      const thumbnailWidth = thumbnails[0].offsetWidth + 16; // width + gap
+      const thumbnailWidth = thumbnails[0].offsetWidth + 16;
       const containerCenter = thumbnailRow.parentElement.offsetWidth / 2;
       const scrollTo = (thumbnailWidth * current + thumbnailWidth / 2) - containerCenter;
       thumbnailRow.parentElement.scrollTo({ left: scrollTo, behavior: 'smooth' });
+
+      const desc = descriptions[current];
+      descriptionBox.innerHTML = `<strong>${desc.name}</strong> (${desc.year})<br>${desc.size} – ${desc.medium}`;
     }
 
     function setImage(index) {
