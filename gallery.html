@@ -6,8 +6,8 @@
   <title>JSquireArt - Gallery</title>
   <link rel="stylesheet" href="style.css" />
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
 </head>
 <body>
@@ -29,10 +29,9 @@
   <div class="gallery-container">
     <div class="main-image">
       <button class="arrow left" onclick="prevImage()"><i class="fas fa-chevron-left"></i></button>
-      <img id="mainDisplay" src="Jorge Squier MiddleEarth.jpg" alt="Main Painting">
+      <img id="mainDisplay" src="Jorge Squier MiddleEarth.png" alt="Main Painting">
       <button class="arrow right" onclick="nextImage()"><i class="fas fa-chevron-right"></i></button>
     </div>
-    
     <div class="thumbnail-wrapper">
       <div class="thumbnail-row" id="thumbnails">
         <img src="Jorge Squier MiddleEarth.jpg" class="active" alt="MiddleEarth" onclick="setImage(0)">
@@ -120,7 +119,7 @@
       const thumbnailWidth = thumbnails[0].offsetWidth + 16; // width + gap
       const containerCenter = thumbnailRow.parentElement.offsetWidth / 2;
       const scrollTo = (thumbnailWidth * current + thumbnailWidth / 2) - containerCenter;
-      thumbnailRow.scrollTo({ left: scrollTo, behavior: 'smooth' });
+      thumbnailRow.parentElement.scrollTo({ left: scrollTo, behavior: 'smooth' });
     }
 
     function setImage(index) {
